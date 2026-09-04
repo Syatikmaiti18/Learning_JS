@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bag{
+            margin-right: 10px;
+            margin-left: 10px;
+            padding-top: 5px;;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: none;
+            background-color: lightgreen;
+            border-radius: 10px;
+
+
+        }
+        .wish{
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 5px;;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-transform: uppercase;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>
+            WEBPAGE 2
+        </h1>
+    </header>
+    <hr>
+    <br>
+
+    <main>
+        <button class="bag" onclick="cartQuantity++; 
+        document.querySelector('#cart-Summary').innerText = `your bag has ${cartQuantity} items`;">Add to bag</button>
+
+        <button class="wish" onclick="cartQuantity--; document.querySelector('#cart-Summary').innerText = `your bag has ${cartQuantity} items`;">move to wishlist</button>
+
+        <button class="bag" onclick="cartQuantity += 2; document.querySelector('#cart-Summary').innerText = `your bag has ${cartQuantity} items`;">Add 1+1 sale item</button>
+
+        <h2 id="cart-Summary"></h2>
+    </main>
+    <hr>
+    <br>
+
+    <footer>
+        <h3>Footer</h3>
+    </footer>
+
+    <script>
+       let cartQuantity = 0;
+       document.querySelector('#cart-Summary').innerText = `your bag has ${cartQuantity} items`;
+    </script>
+</body>
+</html>
