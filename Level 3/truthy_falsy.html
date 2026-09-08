@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and Falsy</title>
+</head>
+<body>
+    <script>
+        // undefined
+        let age;
+        console.log(age);
+        if(age){
+            console.log('you have a valid age');
+        }
+        else{
+            console.log('you are not a human');
+        }
+
+
+        // use of 0 
+        let me = 0;
+        console.log(me);
+        if(me){
+            console.log('its me');
+        }
+        else{
+            console.log('its not me');
+        }
+
+
+
+        // use of null //
+        let we = null;
+        console.log(we);
+        if(we){
+            console.log(`we are here`);
+        }
+        else{
+            console.log(`we are not here`);
+        }
+
+
+        // use of NaN
+        let ball = 4/'egg';
+        console.log(ball);
+        if(ball){
+            console.log('oh! a ball');
+        }
+        else{
+            console.log('shit! its not the ball');
+        }
+
+
+        // use of empty string ""
+
+        let cat = "";
+        console.log(cat);
+        if(cat){
+            console.log('its a cat');
+        }
+        else{
+            console.log('its not a cat');
+        }
+    </script>
+</body>
+</html>
