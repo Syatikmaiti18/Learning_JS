@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parameter</title>
+</head>
+<body>
+    <script>
+
+        // passing of arguments to parameter to implement function // 
+        function sum(a,b){
+            let sum = a + b;
+            return sum; 
+        }
+        console.log(sum(4, 5));
+        console.log(sum(41, 55));
+        console.log(sum(0, 0));
+        console.log(sum(1,-1));
+        console.log(sum(6, 9.8));
+
+    
+        function greeting(name){
+            console.log(`namaste ${name}`);
+        }
+        greeting(`Maa`);
+
+
+
+        // (default parameter) when no argumenets are passed to parameter then its called a default function parameter
+        function name(name = 'pyaree'){
+            console.log(`namaste ${name}`);
+        }
+        name();
+
+        
+    </script>
+</body>
+</html>

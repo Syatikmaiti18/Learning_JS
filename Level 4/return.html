@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use of return in js</title>
+</head>
+<body>
+    <script>
+        function generate_random(){
+            let random = Math.random();
+            let randomMove = random * 3;
+            return randomMove;
+        }
+
+        console.log(generate_random());
+        console.log(generate_random());
+        console.log(generate_random());
+
+        function driverStatus(){
+            let age = Number(prompt("enter your age"));
+            let status;
+            if(age == undefined){
+                return 'not human';
+            }
+            if(age < 18){
+                status = 'use a bicycle';
+            }
+            else{
+                status = 'you can drive';
+            }
+            return status;
+        }
+        console.log(driverStatus());
+
+    </script>
+</body>
+</html>
