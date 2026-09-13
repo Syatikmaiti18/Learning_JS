@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 5</title>
+</head>
+<body>
+    <script>
+        let myntraProduct = {
+            brand: 'peter England',
+            'item-name': 'Cotton Black checked Shirt',
+            price: 599,
+            rating: {
+                stars: 4.6,
+                noOfReviews: 800,
+            },
+        };
+        console.log(myntraProduct.brand);
+        console.log(myntraProduct['item-name']); // bracket notation //
+        console.log(myntraProduct.rating.stars);
+
+        // reference copy //
+        let product = myntraProduct;
+
+        console.log(myntraProduct);
+        product.price = 200;
+        console.log(myntraProduct);
+        product.rating.noOfReviews = 1000;
+        console.log(myntraProduct.rating);
+
+
+        let obj ={
+            message: 'Good Job',
+            status: 'complete',
+        };
+
+        console.log(obj);
+        let{message, status} = obj;
+        console.log(message);
+        console.log(status);
+
+
+        function isIdenticalProduct(product1, product2){
+            if(typeof product1 !== 'object' || typeof product2 !== 'object'){
+                console.warn('Paramter passed was not an object');
+                return false;
+            }
+            if(product1 == product2){
+                return true;
+            }
+            if(product1.name === product2.name &&
+                product1.size === product2.size &&
+                product1.fit === product2.fit
+            ){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        let product2 = {
+            name: 'Jeans',
+            size: 'M',
+            fit: 'Slim Fit',
+            'delivery-time': 'Same day delivery',
+        };
+
+        let product3 = {
+            name: 'Jeans',
+            size: 'M',
+            fit: 'Slim Fit',
+            'delivery-time': 'Same day delivery',
+        };
+
+        console.log(isIdenticalProduct(product, ''));
+        console.log(isIdenticalProduct(product, product));
+        console.log(isIdenticalProduct(product, product2));
+        console.log(isIdenticalProduct(product3, product2));
+    </script>
+</body>
+</html>

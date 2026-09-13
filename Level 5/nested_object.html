@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Object</title>
+</head>
+<body>
+    <script>
+        let product = {
+            company: 'Mango',
+            price: 861,
+            'item-name': 'T-shirt',
+            displayPrice: function(){
+                console.log(`price of the product is ₹${product.price}`);   
+            },
+        };
+        product.displayPrice();
+
+        // (this) keyword can also be used //
+        let car = {
+            brand: 'BMW',
+            color: 'black',
+            'seat-capacity': 5,
+            purpose: function(){
+                console.log(`our ${car['color']} BMW is made for sheer pleasure and comfort`);
+            },
+        };
+        car.purpose();
+
+        // making an object inside an object // 
+        let catagory = {
+            company: 'Mango',
+            'item-name': 'Cotton Stripped T-shirt',
+            price: 872, 
+
+            rating: {
+                stars: 4.5,
+                noOfReview: 100, 
+            },
+            showPrice: function(){
+                return `${this.price.toFixed(2)}`;
+            }, 
+            showCompany: function(){
+                return `${this.company.toUpperCase()}`
+            }
+        };
+        console.log(catagory.showPrice());
+        console.log(catagory.showCompany());
+    </script>
+</body>
+</html>

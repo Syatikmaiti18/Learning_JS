@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        let product = {
+            company: 'Infosys',
+            price: 861,
+            item_name: 'T-shirt',
+            'discount-price': 450, // to access these attributes we use third bracket notation //
+        };
+
+        // dot notation for accessing and modifying //
+        // console.log(product);
+        // console.log(product.company);
+        // console.log(product.price);
+        // console.log(product.item_name);
+        
+        // product.company = 'cognizant';
+        // console.log(product);
+
+
+        // using third bracket for accessing and modifying //
+        console.log(product['company']);
+        product['company'] = 'IBM';
+        console.log(product['company']);
+        console.log(product['discount-price']);
+            // for remote objects also we use them //
+            let cost = 'price';
+            console.log(product[cost]); 
+
+        // deleting any attribute of object company // 
+        delete product.company;
+        console.log(product);
+        delete product['price'];
+        console.log(product);
+
+        
+    </script>
+</body>
+</html>
