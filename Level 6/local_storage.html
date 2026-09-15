@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local_Storage</title>
+</head>
+<body>
+    <script>
+
+        // localStorage.setItem('Name', 'Syatik Maiti');
+        // localStorage.setItem('Price', 'Infinite');
+
+        console.log(localStorage.getItem('Name'));
+        console.log(localStorage.getItem('Price'));
+
+        let product = {
+            name: 'T-shirt',
+            price: 799,
+            rating: {
+                stars: 4.5,
+                noOfReviews: 456,
+            },
+        };
+
+        localStorage.setItem('Product',product);
+        console.log(localStorage.getItem('Product'));
+
+        localStorage.setItem('Product 1', JSON.stringify(product));
+        console.log(localStorage.getItem('Product 1'));
+        console.log(JSON.parse(localStorage.getItem('Product 1')));
+
+        localStorage.removeItem('Product'); // to remove one item at a time //
+
+        localStorage.clear(); // to remove all items // 
+
+
+
+    </script>
+</body>
+</html>

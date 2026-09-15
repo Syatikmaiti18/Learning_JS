@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM properties and method</title>
+</head>
+<body>
+
+    <button class="mybutton">click me</button>
+    <div class="my-div">This is the div</div>
+
+    <script>
+        console.log(document.location);
+        console.log(document.title);
+        console.log(document.href);
+        console.log(document.domain);
+
+        console.log(document.querySelector('button').classList.add('your-class'));
+
+        console.log(document.querySelector('button').classList.remove('mybutton'));
+
+        let Button = document.createElement('Button');
+
+        let div = document.createElement('div');
+
+        Button.innerText =  'divide';
+
+        document.querySelector('.my-div').appendChild(Button);
+
+        // document.querySelector('.my-div').removeChild(Button);
+
+        document.querySelector('.my-div').replaceChild(div,Button);
+
+    </script>
+</body>
+</html>
