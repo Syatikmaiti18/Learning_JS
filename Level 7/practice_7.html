@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 7</title>
+</head>
+<body>
+    <script>
+        let arr = [5,6];
+
+        // arr.push() and arr.pop() add and remove elements from end of array //
+
+        // arr.unshift() and arr.shift() add and remove elements from beginning of the array //
+        
+        console.log(arr);
+        arr.push(7);
+        arr.unshift(4);
+        console.log(arr);
+
+
+        function getElement(arr, pos){
+            return arr[pos];
+        }
+        const x = getElement(arr, 0);
+        console.log(x);
+
+
+        function arrCopy(arr){
+            return arr.slice(0,arr.length);
+        }
+        console.log(arrCopy(arr));
+
+        //checking that if it is copy or not //
+        let arr2 = arrCopy(arr);
+        arr2[0] = 10;
+        console.log(arr)
+        console.log(arr2);
+
+        // function to print prime number //
+
+        function isPrime(num){
+            for(let i = 2; i < num ; i++){
+                if(num % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        console.log(isPrime(5));
+        console.log(isPrime(10));
+        console.log(isPrime(2));
+        console.log(isPrime(17));
+
+
+        // print 5 prime number using break //
+        let num = 2;
+        let count = 0;
+        while(true){
+            if(isPrime(num)){
+                console.log(num);
+                count++;
+            }
+            if(count >= 5){
+                break;
+            }
+            num++;
+        }
+
+
+        // print 1 to 10 in reverse order //
+
+        for(let i = 10; i > 0 ; i--){
+            console.log(i);
+        }
+
+        for(let i = 0; i < 10; i++){
+            console.log(10-i);
+        }
+
+        // only print the positive number in the array //
+        let arr3 = [1,-6,5,7,-98];
+        for(let i = 0; i < arr3.length; i++){
+            if(arr3[i] < 0) continue;
+            console.log(arr3[i]);
+        }
+
+        // concat all string elements in the array // 
+        let brr = ['KG' , 'Coding' ,'Javascript', 'course', 'is' , 'best'];
+        let result = '';
+        for(let i = 0; i < brr.length ; i++){
+            result += brr[i] + ' ';
+        }
+        console.log(result);
+
+        // alternatively //
+
+        console.log(brr.join(" "));
+
+
+
+    </script>
+</body>
+</html>

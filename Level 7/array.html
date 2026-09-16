@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // in javascript arrays are special kind of "objects" //
+
+        // we can insert same datatype elements in array //
+        let numbers = [1,4,3,7,5,6,8];
+        console.log(numbers);
+        console.log(numbers[0]);
+        console.log(numbers[1]);
+        console.log(numbers[6]);
+        console.log(typeof(numbers));
+
+
+        // we can also insert different datatype elements in array // 
+        let arr = [1, true, 'hello', {product: 't-shirt'}];
+        console.log(arr);
+        console.log(typeof(arr[1]));
+        console.log(typeof(arr[2]));
+        console.log(arr[3]);
+
+        let crr = {
+            product: 'bag',
+        };
+
+
+        // checking that the given variable is array ot not //
+        console.log(Array.isArray(arr));
+        // console.log(Array.isArray(brr));
+        console.log(Array.isArray(crr));
+
+
+        // checking the length of the array //
+        console.log(arr.length);
+        console.log(numbers.length);
+
+
+        // to add or remove element from the end //
+        let num = [1,3,4];
+        console.log(num);
+        num.push(6); // to add elements at the end //
+        console.log(num);
+        console.log('popped ' + num.pop()); // to remove elements from end // 
+        console.log('popped ' + num.pop());
+        console.log(num);
+
+
+        let x = [3,5,2,1];
+        console.log(x);
+        x.splice(1,2); // start from first index and delete 2 elements (including first index); 
+        console.log(x);
+
+        let y = [3,6,2,8];
+        console.log(y.toString()); // to convert array to string like(3,6,2,8)
+
+        let z = [3,1,2,7];
+        console.log(z.sort()); // to sort array in ascending order //
+
+
+        let n = [2,1,7,9,0];
+        console.log(n.valueOf()); // return the same array itself // 
+
+
+        // arrays also use reference like objects // 
+        let m = n;
+        console.log(m[0]);
+        m[0] = 6;
+        console.log(n);
+
+
+        // de-structuring of array//
+        let [a,v,d,f,g,j] = n;
+        console.log(a + " " + v + " " + d + " " + f + " " + g);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
